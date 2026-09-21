@@ -104,3 +104,9 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# ==========================================
+# Scripts del proyecto Tanks (reemplazados por los propios)
+# ==========================================
+/[Aa]ssets/_Tanks/Scripts/
+/[Aa]ssets/MiJuego/
