@@ -81,7 +81,11 @@ public class PlayerController : Entity
     private void Shoot()
     {
         if (_bulletPrefab == null || _shootPoint == null) return;
-        Instantiate(_bulletPrefab, _shootPoint.position, _shootPoint.rotation);
+
+        GameObject bullet = Instantiate(_bulletPrefab, _shootPoint.position, _shootPoint.rotation);
+        BulletController bc = bullet.GetComponent<BulletController>();
+        if (bc != null)
+            bc.Launch(_shootPoint.forward); // le pasamos la dirección hacia donde mira el cañón
     }
 
     // Override de Entity: el jugador no se destruye, hace respawn
